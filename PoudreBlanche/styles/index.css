@@ -1,0 +1,555 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab:focus, .tab:active {
+  outline: 2px solid #C79F4E;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background: #1D4D4E;
+  color: #fff;
+  border: none;
+  -webkit-transition: -webkit-box-shadow 400ms, -webkit-transform 200ms;
+  transition: -webkit-box-shadow 400ms, -webkit-transform 200ms;
+  transition: box-shadow 400ms, transform 200ms;
+  transition: box-shadow 400ms, transform 200ms, -webkit-box-shadow 400ms, -webkit-transform 200ms;
+}
+
+.button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.button:focus, .button:active {
+  -webkit-box-shadow: 0 0 0 5px #C79F4E;
+          box-shadow: 0 0 0 5px #C79F4E;
+}
+
+body {
+  opacity: 1;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+  line-height: 1.3;
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+body * {
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
+
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body #nav {
+  position: fixed;
+  width: 100%;
+  height: 15vh;
+  padding: 2.5rem 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 50;
+  -webkit-transition: height 500ms;
+  transition: height 500ms;
+}
+
+body #nav.active {
+  height: 10vh;
+  padding: 1rem 5vw;
+  background: #fff;
+}
+
+body #nav.active #content #logo {
+  display: block;
+  background: url("../img/picto.png") no-repeat 50% 50%/contain;
+  height: 50px;
+  width: 50px;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  opacity: 1;
+  -webkit-animation: fadeIn 200ms;
+          animation: fadeIn 200ms;
+}
+
+body #nav.active #content p {
+  font-size: .8rem;
+  -webkit-transition: font-size 200ms;
+  transition: font-size 200ms;
+}
+
+body #nav.active #content p:first-child {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+body #nav #content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #nav #content #logo {
+  display: block;
+  background: url("../img/mono.png") no-repeat 50% 50%/contain;
+  height: 50px;
+  width: 50px;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-animation: fadeIn 200ms;
+          animation: fadeIn 200ms;
+}
+
+body #nav #content p {
+  margin: .1rem 0 .1rem 1rem;
+  color: #1D4D4E;
+  width: 20rem;
+}
+
+body #nav #content p:first-child {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+body #nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #nav ul li {
+  position: relative;
+  margin: 0 1.5rem;
+  padding-bottom: 3px;
+  color: #1D4D4E;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+body #nav ul li::before {
+  content: '';
+  position: absolute;
+  background: #1D4D4E;
+  width: 0;
+  height: 2px;
+  right: 0;
+  bottom: 2px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+body #nav ul li:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+body main {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+
+body main #circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 5;
+}
+
+body main #container {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 35%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+body main #container > * {
+  margin: 1rem 0;
+}
+
+body main #container h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+body main #container p {
+  color: #555;
+  font-size: 1.25rem;
+}
+
+body #avis {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background: #1D4D4E;
+  padding: 10vh 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #avis #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #avis #container div img {
+  width: 7vw;
+  height: 7vw;
+  border-radius: 50%;
+}
+
+body #avis #container div p {
+  text-align: right;
+  font-size: 1rem;
+  color: #fff;
+}
+
+body #avis #container div p:first-of-type {
+  margin-top: .25rem;
+  font-weight: bold;
+}
+
+body #avis #container div p:last-of-type {
+  margin-top: .5rem;
+  font-style: italic;
+}
+
+body #avis #container #text {
+  margin-left: 1rem;
+  width: 40%;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+body #avis #progress_bar {
+  position: absolute;
+  bottom: 2.5rem;
+  width: 60%;
+  height: 2px;
+  margin: 0 20%;
+}
+
+@-webkit-keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+body #avis #progress_bar #bar {
+  width: 0;
+  height: 100%;
+  background: #C79F4E;
+  -webkit-animation: progress 10s ease-in-out infinite;
+          animation: progress 10s ease-in-out infinite;
+}
+
+body #carte {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5vh 5vw;
+}
+
+body #carte #container {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #carte #container article {
+  position: relative;
+  width: 30%;
+  min-width: 350px;
+  margin: .5rem;
+  overflow: hidden;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  border-radius: 5px;
+  padding-bottom: 2rem;
+  -webkit-box-shadow: 0 0 2px #000;
+          box-shadow: 0 0 2px #000;
+}
+
+body #carte #container article img {
+  width: 100%;
+  height: 200px;
+}
+
+body #carte #container article h1, body #carte #container article h2 {
+  margin-left: 2rem;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+body #carte #container article h1 {
+  color: #222;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+}
+
+body #carte #container article h2 {
+  color: #333;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+body #carte #container article a {
+  position: absolute;
+  bottom: -1rem;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  margin: 0 2rem;
+  color: #1D4D4E;
+  text-transform: uppercase;
+}
+
+body #carte #container article:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+body #carte #container article:hover h1, body #carte #container article:hover h2 {
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+}
+
+body #carte #container article:hover a {
+  bottom: 2rem;
+}
+
+body footer {
+  background: #1d4d4e;
+  padding: 5vh 5vw;
+  color: #fff;
+}
+
+body footer #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body footer #container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+}
+
+body footer #container nav a {
+  margin: .5rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+body footer #container nav a:hover {
+  color: #C79F4E;
+}
+
+body footer #container #text {
+  width: 40%;
+}
+
+body footer #container div {
+  width: 25%;
+  height: 5rem;
+  padding-left: 2rem;
+  border-left: 2px solid #C79F4E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer #container div p {
+  margin: .2rem;
+}
+
+body footer #baseline {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body footer #baseline #logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body footer #baseline #logo img {
+  height: 60%;
+  width: auto;
+}
+
+body footer #baseline #logo p {
+  margin: 0 1rem;
+}
+
+body footer #baseline ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body footer #baseline ul li {
+  margin: 0 2rem;
+}
+
+body footer #baseline ul li a {
+  display: block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+body footer #baseline ul li a:hover {
+  color: #C79F4E;
+}
+/*# sourceMappingURL=index.css.map */
